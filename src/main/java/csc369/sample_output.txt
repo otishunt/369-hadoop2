@@ -1,0 +1,131 @@
+input_access_log - collection of apache log files, taken from previous lab.
+hostname_countries - given csv of hostnames and countries
+These two are the input for the first job in each of these tasks.
+
+1.
+RequestCountByCountry output:
+
+Denmark	2
+Canada	4
+Canada	7
+Intranet	188
+United States	1
+United States	12
+United States	3
+
+AggregateByCountry output:
+
+Australia	17
+Canada	127
+Denmark	4
+Finland	1
+France	16
+Germany	13
+Intranet	198
+Israel	19
+Korea	4
+Los Alamos	1
+
+AccessLog2 output:
+
+Unknown Location	812
+Intranet	198
+Canada	127
+United States	87
+Robot	80
+Israel	19
+Australia	17
+France	16
+Wherever You Want to Ship	13
+Germany	13
+
+2.
+
+CountURLs output:
+
+Denmark	/razor.html	1
+Denmark	/favicon.ico	1
+Canada	/images/image004.jpg	1
+Canada	/ie.htm	1
+Canada	/images/image005.jpg	1
+Canada	/images/msgops.JPG	1
+Canada	/mailman/listinfo	1
+Canada	/icons/PythonPowered.png	1
+Canada	/icons/gnu-head-tiny.jpg	1
+Canada	/mailman/listinfo/administration	1
+Canada	/	1
+
+AggregateByCountryURL output:
+
+Australia	/icons/PythonPowered.png	1
+Australia	/icons/gnu-head-tiny.jpg	1
+Australia	/icons/mailman.jpg	1
+Australia	/mailman	1
+Australia	/mailman/admin	1
+Australia	/mailman/admin/webct	1
+Australia	/mailman/listinfo	2
+Australia	/mailman/listinfo/administration	1
+Australia	/mailman/listinfo/cnc_notice	1
+Australia	/twiki/bin/view/Main/SpamAssassinAndPostFix	2
+Australia	/twiki/bin/view/Main/SpamAssassinDeleting	2
+Australia	/twiki/bin/view/Main/SpamAssassinTaggingOnly	1
+Australia	/twiki/bin/view/Main/WebHome	1
+Australia	/twiki/pub/TWiki/TWikiLogos/twikiRobot46x50.gif	1
+Canada	/	4
+
+SortByCountryThenCount output:
+
+Australia	/twiki/bin/view/Main/SpamAssassinDeleting	2
+Australia	/twiki/bin/view/Main/SpamAssassinAndPostFix	2
+Australia	/mailman/listinfo	2
+Australia	/mailman	1
+Australia	/icons/mailman.jpg	1
+Australia	/icons/gnu-head-tiny.jpg	1
+Australia	/icons/PythonPowered.png	1
+Australia	/twiki/pub/TWiki/TWikiLogos/twikiRobot46x50.gif	1
+Australia	/twiki/bin/view/Main/WebHome	1
+Australia	/twiki/bin/view/Main/SpamAssassinTaggingOnly	1
+Australia	/mailman/listinfo/cnc_notice	1
+Australia	/mailman/listinfo/administration	1
+Australia	/mailman/admin/webct	1
+Australia	/mailman/admin	1
+Canada	/mailman/admin/ppwc	9
+Canada	/mailman/listinfo/ppwc	9
+
+
+3.
+
+CountURLs3 output:
+
+/razor.html	Denmark
+/favicon.ico	Denmark
+/images/image004.jpg	Canada
+/ie.htm	Canada
+/images/image005.jpg	Canada
+/images/msgops.JPG	Canada
+/mailman/listinfo	Canada
+/icons/PythonPowered.png	Canada
+/icons/gnu-head-tiny.jpg	Canada
+/mailman/listinfo/administration	Canada
+/	Canada
+/mailman	Canada
+/icons/mailman.jpg	Canada
+
+AggregateByURL output:
+
+/	Canada, France, Intranet, Israel, Netherlands, Robot
+/LateEmail.html	Canada
+/M83A	Taiwan
+/RBL.html	Canada
+/SpamAssassin.html	Canada, Germany, Israel, Netherlands
+/cgi-bin/mailgraph.cgi/mailgraph_0.png	Canada, Intranet
+/cgi-bin/mailgraph.cgi/mailgraph_0_err.png	Canada, Intranet
+/cgi-bin/mailgraph.cgi/mailgraph_1.png	Canada, Intranet
+/cgi-bin/mailgraph.cgi/mailgraph_1_err.png	Canada, Intranet
+/cgi-bin/mailgraph.cgi/mailgraph_2.png	Canada, Intranet
+/cgi-bin/mailgraph.cgi/mailgraph_2_err.png	Canada, Intranet
+/cgi-bin/mailgraph.cgi/mailgraph_3.png	Canada, Intranet
+/cgi-bin/mailgraph.cgi/mailgraph_3_err.png	Canada, Intranet
+/cgi-bin/mailgraph2.cgi	Canada, Intranet
+/dccstats/index.html	Canada, Israel
+

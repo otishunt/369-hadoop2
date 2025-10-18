@@ -1,9 +1,11 @@
 1.
-I used RequestCountByCountry as my initial job, which contained a reduce-side join. This was in
-favor of the thought that neither of the inputs are known to be small, and the inputs can presumably
-be extremely large. There is another job called AggregateByCountry, as they are otherwise separated
-because they come from different data sources, and are coded as such by the mappers. The third job,
-AccessLog2, comes from switching key,value pairs and using a descending comparator.
+I used RequestCountByCountry as my initial job, which contained a reduce-side join, and outputs
+(country, count), although it needs another step to be properly aggregated since the pairs come from
+different mappers. The reduce-side join was in favor of the thought that neither of the inputs are
+known to be small, and the inputs can presumably be extremely large. There is another job called
+AggregateByCountry, as they are otherwise separated because they come from different data sources,
+and are coded as such by the mappers. The third job, AccessLog2, comes from switching key,value
+pairs and using a descending comparator.
 First input/output: input_access_log hostname_countries output1,
 Second input/output: output1, output1_1,
 Third input/output: output1_1, output1_2
